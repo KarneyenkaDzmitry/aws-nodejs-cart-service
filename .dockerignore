@@ -9,7 +9,7 @@ README.md
 .cache
 *.spec.ts
 
-The folders should not be copied as they useless for the build stage
+# The folders should not be copied as they useless for the build stage
 dist
 node_modules
 test

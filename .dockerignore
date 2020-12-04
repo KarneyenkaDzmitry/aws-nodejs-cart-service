@@ -1,0 +1,15 @@
+# The files make sence while an application is developing but not for build stage. They usually used in the developing stage
+.eslintrc.js
+.gitignore
+.prettierrc
+Dockerfile
+README.md
+*.log
+.git
+.cache
+*.spec.ts
+
+The folders should not be copied as they useless for the build stage
+dist
+node_modules
+test

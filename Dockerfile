@@ -1,5 +1,5 @@
 ARG NODE_VERSION=14
-ARG IMAGE=node:$NODE_VERSION-alpine
+ARG IMAGE=node:${NODE_VERSION}-alpine
 
 FROM ${IMAGE}  as builder
 

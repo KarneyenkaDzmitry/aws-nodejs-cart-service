@@ -1,7 +1,8 @@
-ARG NODE_VERSION=14
-ARG IMAGE=node:${NODE_VERSION}-alpine
+# ARG NODE_VERSION=14
+# ARG IMAGE=node:${NODE_VERSION}-alpine
+# ARG IMAGE=node:14-alpine
 
-FROM ${IMAGE}  as builder
+FROM node:14-alpine  as builder
 
 ENV MAINTAINER=DzmitryKarneyenka
 ENV CUSTOM=DzmitryKarneyenka
@@ -14,14 +15,14 @@ RUN npm install --no-audit --no-optional --no-package-lock
 COPY . .
 RUN npm run build
 
-FROM ${IMAGE} as middle
+FROM node:14-alpine as middle
 
 WORKDIR /app
 
 COPY package.json ./
 RUN npm install --only=prod --no-audit --no-optional --no-package-lock
 
-FROM ${IMAGE}  as production
+FROM node:14-alpine  as production
 
 WORKDIR /app
 

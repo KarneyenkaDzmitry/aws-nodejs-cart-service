@@ -7,7 +7,8 @@ README.md
 *.log
 .git
 .cache
-*.spec.ts
+/**/*.spec.ts
+/**/*.spec.js
 
 # The folders should not be copied as they useless for the build stage
 dist

@@ -20,7 +20,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "docker:build": "docker build -t aws-nodejs-cart-service:0.0.2 -f Dockerfile --build-arg NODE_VERSION=14 ."
+    "docker:build": "docker build --build-arg NODE_VERSION=10 -t aws-nodejs-cart-service:1.0.1 ."
   },
   "dependencies": {
     "@nestjs/common": "^7.5.1",
